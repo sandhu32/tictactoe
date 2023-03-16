@@ -50,42 +50,6 @@ nav ul{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-:root {
-    --clr-background: #eceff1;
-    --clr-base: #ffffff;
-    --clr-primary: #aa00ff;
-    --clr-gray: #263238;
-    --font-size: 16px;
-    --border-radius: 0.2em;
-  }
-
-/* // dark mode colors class  */
-.dark-mode {
-  --clr-background: #263238;
-  --clr-base: black;
-  --clr-primary: #69f0ae;
-  --clr-gray: #36b0c0;
-}
-
-/* //container that holds the switch  */
-.wrapper-color-switch {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 1em;
-}
-
-/* //label for switch that is interactive  */
-.color-switch {
-  width: 4em;
-  height: 2em;
-  border-radius: 10em;
-  background: var(--clr-base);
-  border: 2px solid var(--clr-primary);
-  position: absolute;
-  cursor: pointer;
-}
-
 
 .br-0{
     border-right: 0;
@@ -108,8 +72,43 @@ cursor: pointer;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-size: 15px;
 font-weight: bolder;
-background-color: aliceblue;
-}
+    
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   #reset::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   #reset:hover {
+    color: #e8e8e8;
+   }
+   
+   #reset:hover::before {
+    width: 100%;
+   }
 
 footer {
     text-align: center;
